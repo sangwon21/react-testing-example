@@ -20,8 +20,10 @@ export class UnconnectedInput extends Component {
 
     if (guessWord && guessWord.length > 0) {
       this.props.guessWord(guessedWord);
+      this.setState({ currentGuess: "" });
     }
   }
+
   render() {
     const contents = this.props.success ? null : (
       <form className="form-inline">
